@@ -1,5 +1,7 @@
 package bo.upb.programacion3.codelabpokedex;
 
+import android.app.ProgressDialog;
+import android.arch.lifecycle.ViewModelProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import bo.upb.programacion3.codelabpokedex.viewModel.LoginViewModel;
+
 public class LoginActivity extends AppCompatActivity {
 
 
     private Context context;
+
+    private LoginViewModel viewModel;
+    private ProgressDialog loadingDialog;
 
     private EditText emailEditText;
     private EditText passwordEditText;
@@ -22,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+        viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
 
         this.context = this;
         //initUI();
