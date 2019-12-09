@@ -1,14 +1,15 @@
 package bo.upb.programacion3.codelabpokedex;
 
 import android.app.ProgressDialog;
-import android.arch.lifecycle.ViewModelProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import bo.upb.programacion3.codelabpokedex.viewModel.LoginViewModel;
 
@@ -35,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         //initUI();
         //initEvents();
 
-        emailEditText.setText("cualquiera@pumatiti.com");
-        passwordEditText.setText("noImporta");
+        //emailEditText.setText("cualquiera@pumatiti.com");
+        //passwordEditText.setText("noImporta");
 
         Intent intent = getIntent();
         if (intent.hasExtra("message")) {

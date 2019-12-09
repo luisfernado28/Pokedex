@@ -4,20 +4,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-<include layout="@layout/drawer_header_layout" />
+    <include layout="@layout/drawer_header_layout" />
 
-<Button
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:background="?attr/selectableItemBackground"
-android:text="@string/drawer_button_my_pokemons"
-android:onClick="goToMyPokemons"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="goToMyPokemons"
+        android:text="@string/drawer_button_my_pokemons" />
 
-<Button
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:background="?attr/selectableItemBackground"
-android:text="@string/drawer_button_my_favorites"
-android:onClick="goToMyFavoritePokemons"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="goToMyFavoritePokemons"
+        android:text="@string/drawer_button_my_favorites" />
 
-    </LinearLayout>
+</LinearLayout>

@@ -1,10 +1,11 @@
 package bo.upb.programacion3.codelabpokedex.viewModel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import bo.upb.programacion3.codelabpokedex.model.Repository.Base;
 import bo.upb.programacion3.codelabpokedex.model.Repository.Usuario;
@@ -12,7 +13,9 @@ import bo.upb.programacion3.codelabpokedex.model.ui.userLogged;
 import bo.upb.programacion3.codelabpokedex.model.utils.ResponseMapper;
 
 public class LoginViewModel extends AndroidViewModel {
-    public LoginViewModel(@NonNull Application application) { super(application); }
+    public LoginViewModel(@NonNull Application application) {
+        super(application);
+    }
 
     public LiveData<Base> login(final String email, final String password) {
         final MutableLiveData<Base> result = new MutableLiveData<>();
